@@ -68,6 +68,8 @@ def to_camel_case(underscore_str):
             >>> tp2.to_camel_case(underscore_str3)
             "alreadyCamel"
     """
+    if '_' not in underscore_str:
+        return underscore_str
     camelcase_str = ""
     stripedstr = underscore_str.strip('_')
     do_upper = False
